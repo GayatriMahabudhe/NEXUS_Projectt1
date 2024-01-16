@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <div id="msg"></div>
+        Username:<input type="text" id="u"><br>
+        Password:<input type="password" id="p"> <br>
+        <button onclick="login()">login</button> 
+        <div id="msg"></div>
+    </body>
+    <script>
+        function login(){
+            var u=document.getElementById("u");
+            var p=document.getElementById("p");
+
+            var user=u.value;
+            var pass=p.value;
+            var msg1=document.getElementById("msg");
+            
+
+            if(user=="admin"&&pass=="admin"){
+                msg1.style.color="green";
+                msg1.innerText="succesful";
+                console.log("succesful");
+               
+            }
+            else{
+                
+                msg1.style.color="red";
+                msg1.innerText="unsuccesful";
+                console.log("unsuccesful");
+            }
+            var msgElem=document.getElementById("msg");
+        }
+    </script>
+
+
+</html>
